@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ninja Mail</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-family-primary: "Raleway", sans-serif;
+        --font-family-secondary: "Playfair Display", serif;
+      }
+
+      .font-family-pr {
+        font-family: var(--font-family-primary);
+      }
+      .font-family-se {
+        font-family: var(--font-family-secondary);
+      }
+      .box-shadow {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      nav {
+        height: 102px;
+      }
+      .logo-title {
+        font-weight: 900;
+        margin-left: -20px;
+      }
+      nav a,
+      nav a:link {
+        text-decoration: none;
+        font-family: var(--font-family-primary);
+        font-weight: 800;
+      }
+
+      .hero-left {
+        margin-right: -150px;
+        z-index: 5;
+      }
+      .hero-right {
+        z-index: 3;
+      }
+      .rec-1 {
+        top: 133px;
+        left: 327px;
+      }
+      .rec-2 {
+        top: 450px;
+        left: 170px;
+      }
+      .rec-3 {
+        top: 120px;
+        right: 180px;
+      }
+      .rec-9 {
+        top: 100px;
+        right: 400px;
+      }
+      .rec-10 {
+        top: 200px;
+        left: 75px;
+      }
+      .ell-1 {
+        top: 130px;
+        right: 600px;
+      }
+      .ell-2 {
+        top: 550px;
+        left: 700px;
+      }
+      .ell-5 {
+        top: 350px;
+        left: 120px;
+      }
+      .ell-6 {
+        top: 200px;
+        right: 100px;
+      }
+      @media screen and (max-width: 992px) {
+        .rec-1 {
+          top: 120px;
+          left: 200px;
+        }
+        .rec-2 {
+          top: 400px;
+          left: 50px;
+        }
+        .rec-3 {
+          top: 100px;
+          right: 100px;
+        }
+        .rec-9 {
+          top: 100px;
+          right: 300px;
+        }
+
+        .ell-2 {
+          top: 450px;
+          left: 600px;
+        }
+        .ell-5 {
+          top: 300px;
+          left: 100px;
+        }
+        .ell-6 {
+          top: 300px;
+          right: 80px;
+        }
+      }
+
+      .learn-more {
+        overflow: hidden;
+      }
+      .learn-more-bg {
+        margin-top: -145px;
+      }
+      .learn-more-img {
+        z-index: 5;
+      }
+      .learn-more-text {
+        z-index: 10;
+      }
+
+      .source {
+        padding: 400px 0;
+        margin-top: -375px;
+        background: #caeac7;
+        clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+        overflow: hidden;
+      }
+      .source a,
+      .source a:link {
+        text-decoration: none;
+      }
+
+      .source-img-bg {
+        top: 30%;
+        right: 0;
+      }
+      .source-card--1 {
+        margin-top: -100px;
+      }
+
+      .members {
+        margin-top: -200px;
+        position: relative;
+        z-index: 5;
+      }
+      .member-text-box {
+        margin: -80px 0 0 20px;
+      }
+      .member-text-h3 {
+        font-weight: 900;
+      }
+      .member-text-box p {
+        font-weight: 700;
+      }
+      .copyright {
+        font-family: var(--font-family-primary);
+      }
+      .copyright a,
+      .copyright a:link {
+        text-decoration: none;
+      }
+      @media screen and (max-width: 992px) {
+        .source {
+          margin-top: -250px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .source {
+          margin-top: -125px;
+        }
+        .hero-left {
+          margin-right: 0px;
+        }
+        .hero-title {
+          margin-bottom: 300px;
+        }
+        .hero-right {
+          margin-top: -450px;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .source {
+          margin-top: 0px;
+        }
+        .hero-title {
+          margin-bottom: 200px;
+        }
+        .hero-right {
+          margin-top: -350px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <div class="d-flex align-items-center">
+                <img
+                  class="logo img-fluid"
+                  src="./images/logo.png"
+                  alt="logo"
+                />
+                <h3 class="logo-title font-family-pr">NinjaMail</h3>
+              </div>
+              <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav list-unstyled">
+                  <li class="me-4 border-bottom border-success border-4">
+                    <a class="text-uppercase text-dark" href="#">features</a>
+                  </li>
+                  <li class="me-4 border-bottom border-success border-4">
+                    <a class="text-uppercase text-dark" href="#">pricing</a>
+                  </li>
+                  <li class="me-4 border-bottom border-success border-4">
+                    <a class="text-uppercase text-dark" href="#">services</a>
+                  </li>
+                  <li class="me-4 border-bottom border-success border-4">
+                    <a class="text-uppercase text-dark" href="#">partners</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-btn d-sm-inline-block">
+                <a
+                  class="main-btn btn btn-success text-uppercase rounded-0"
+                  href="#"
+                  >sign up free</a
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="container position-relative">
+        <div class="row justify-content-center py-5">
+          <div class="col-lg-3 col-md-4 col-12">
+            <div class="hero-left position-relative">
+              <h1 class="hero-title display-5 font-family-se my-lg-4 my-md-3">
+                Create Stunning Email Campaigns
+              </h1>
+              <p class="font-family-pr">
+                Create and launch email campaigns that captivate your customers
+                in just a few clicks.
+              </p>
+              <div
+                class="row justify-content-md-start justify-content-evenly btn-box font-family-pr"
+              >
+                <button
+                  type="button"
+                  class="col-5 hero-btn btn btn-lg btn-success text-uppercase rounded-0 me-md-4 me-3"
+                >
+                  try now
+                </button>
+                <button
+                  type="button"
+                  class="col-5 hero-btn btn btn-lg btn-outline-success text-uppercase text-success rounded-0 bg-white"
+                >
+                  get a demo
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-7 col-12">
+            <div class="hero-right position-relative">
+              <img
+                class="img-fluid box-shadow"
+                src="./images/img-1.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rec-1 position-absolute d-none d-md-block">
+        <img src="./images/rec-1.png" alt="" />
+      </div>
+      <div class="rec-2 position-absolute d-none d-md-block">
+        <img src="./images/rec-2.png" alt="" />
+      </div>
+      <div class="rec-3 position-absolute d-none d-md-block">
+        <img src="./images/rec-3.png" alt="" />
+      </div>
+      <div class="rec-9 position-absolute d-none d-md-block">
+        <img src="./images/rec-9.png" alt="" />
+      </div>
+      <div class="rec-10 position-absolute d-none d-md-block">
+        <img src="./images/rec-10.png" alt="" />
+      </div>
+      <div class="ell-1 position-absolute d-none d-md-block">
+        <img src="./images/ell-1.png" alt="" />
+      </div>
+      <div class="ell-2 position-absolute d-none d-md-block">
+        <img src="./images/ell-2.png" alt="" />
+      </div>
+      <div class="ell-5 position-absolute d-none d-md-block">
+        <img src="./images/ell-5.png" alt="" />
+      </div>
+      <div class="ell-6 position-absolute d-none d-md-block">
+        <img src="./images/ell-6.png" alt="" />
+      </div>
+    </header>
+    <section
+      class="learn-more bg-light d-flex justify-content-center align-items-center"
+    >
+      <div class="learn-more-main position-relative">
+        <img
+          class="learn-more-bg img-fluid"
+          src="./images/slash_black.png"
+          alt=""
+        />
+        <img
+          class="learn-more-img img-fluid position-absolute top-50 start-50 translate-middle"
+          src="./images/img-2.png"
+          alt=""
+        />
+
+        <div
+          class="learn-more-text text-center position-absolute top-50 start-50 translate-middle"
+        >
+          <h2 class="display-4 text-white font-family-se">
+            Reach More Customers
+          </h2>
+          <button
+            class="btn btn-outline-success text-uppercase text-success rounded-0 bg-white"
+          >
+            learn more
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="source position-relative">
+      <img
+        src="./images/slash_white.png"
+        alt=""
+        class="source-img-bg position-absolute img-fluid"
+      />
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-3 col-md-4 col-7 mb-5 mb-md-0 me-0 me-md-4 px-4 px-md-3 px-lg-2"
+          >
+            <div
+              class="card source-card--1 font-family-pr w-100 box-shadow rounded-0"
+            >
+              <img
+                src="./images/img-3.png"
+                class="card-img-top img-fluid rounded-0"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text font-family-pr">
+                  Launch campaigns but also find new customers. Our unique
+                  platform handles campaigns from start to end.
+                </p>
+                <a href="#" class="text-success">Learn more></a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-md-4 col-7 mb-5 mb-md-0 me-0 me-md-4 px-4 px-md-3 px-lg-2"
+          >
+            <div
+              class="card source-card--2 font-family-pr w-100 box-shadow rounded-0"
+            >
+              <img
+                src="./images/img-4.png"
+                class="card-img-top rounded-0"
+                alt="..."
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Launch campaigns but also find new customers. Our unique
+                  platform handles campaigns from start to end.
+                </p>
+                <a href="#" class="text-success">Learn more></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-8 mt-3 mt-md-5">
+            <div class="source-content w-100 lh-base">
+              <h2 class="display-6 font-family-se mb-3">
+                The source for proven, engaging email campaigns
+              </h2>
+              <p class="font-family-pr pe-5">
+                Whether you’re a startup, small business, e-commerce store, or
+                want to promote your app, NinjaMail has the feature set tailored
+                for your business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-study">
+      <div class="container-fluid">
+        <div
+          class="members row justify-content-center font-family-pr text-white"
+        >
+          <div
+            class="col-12 col-md-3 d-flex justify-content-center align-items-center me-md-4 mb-md-0 mb-4"
+          >
+            <div class="member-box">
+              <img
+                src="./images/img-5.png"
+                alt=""
+                class="member-img img-fluid box-shadow"
+              />
+              <div class="member-text-box">
+                <h3 class="fw-bold">Frankie</h3>
+                <p>Member since 2016</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 d-flex justify-content-center align-items-center me-md-4 mb-md-0 mb-4"
+          >
+            <div class="member-box">
+              <img
+                src="./images/img-6.png"
+                alt=""
+                class="member-img img-fluid box-shadow"
+              />
+              <div class="member-text-box">
+                <h3 class="fw-bold">Camile</h3>
+                <p>Member since 2012</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 d-flex justify-content-center align-items-center"
+          >
+            <div class="member-box">
+              <img
+                src="./images/img-7.png"
+                alt=""
+                class="member-img img-fluid box-shadow"
+              />
+              <div class="member-text-box">
+                <h3 class="fw-bold">Elayne</h3>
+                <p>Member since 2018</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="join-box text-center my-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <h2 class="col-8 display-5 font-family-se lh-base">
+              Learn how others are reaching their audience easier than ever
+              before.
+            </h2>
+          </div>
+
+          <form class="row justify-content-center mt-3">
+            <div class="col-8 col-lg-5 col-md-6">
+              <label for="inputEmail" class="visually-hidden">Email</label>
+              <input
+                type="email"
+                class="form-control form-control-lg mb-3"
+                id="inputEmail"
+                placeholder="Enter your email"
+              />
+            </div>
+            <div class="col-8 col-lg-2 col-md-3">
+              <button
+                type="submit"
+                class="btn btn-lg btn-success text-uppercase rounded-0"
+              >
+                join our list
+              </button>
+            </div>
+            <p class="text-success">Thanks! Email received.</p>
+          </form>
+        </div>
+      </div>
+      <div class="brand-box text-center my-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <h2 class="col-lg-5 col-md-6 col-7 display-5 font-family-se mt-5">
+              All the best brands already use us.
+            </h2>
+          </div>
+
+          <div class="row justify-content-center my-5">
+            <div class="col-6 col-sm-2 mb-4 mb-sm-0">
+              <img class="img-fluid" src="./images/footer-logo-1.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-2 mb-4 mb-sm-0">
+              <img class="img-fluid" src="./images/footer-logo-2.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-2 mb-4 mb-sm-0">
+              <img class="img-fluid" src="./images/footer-logo-3.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-2 mb-4 mb-sm-0">
+              <img class="img-fluid" src="./images/footer-logo-4.png" alt="" />
+            </div>
+            <div class="col-6 col-sm-2">
+              <img class="img-fluid" src="./images/footer-logo-5.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="get-start text-center bg-success py-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="font-family-se text-white mb-5">Get started today!</h2>
+      </div>
+
+      <button
+        class="btn btn-lg btn-outline-success bg-white text-uppercase text-success rounded-0"
+      >
+        sign up free
+      </button>
+    </section>
+    <footer>
+      <div class="container-fluid">
+        <div class="row justify-content-between p-sm-5 p-3">
+          <div
+            class="col-md-3 d-flex align-items-center justify-content-center mb-3 mb-md-0"
+          >
+            <img class="logo" src="./images/logo.png" alt="logo" />
+            <h2 class="logo-title font-family-pr">NinjaMail</h2>
+          </div>
+          <div class="col-md-7">
+            <div class="row">
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                  <li>Features</li>
+                  <li>Pricing</li>
+                  <li>Services</li>
+                  <li>Partners</li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                  <li>About Us</li>
+                  <li>Tutorials</li>
+                  <li>Resources</li>
+                  <li>Help Center</li>
+                  <li>Templates</li>
+                  <li>Case Studies</li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                  <li>Medium</li>
+                  <li>Twitter</li>
+                  <li>Facebook</li>
+                  <li>Instagram</li>
+                  <li>LinkedIn</li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-3 d-flex justify-content-center">
+                <ul class="list-unstyled">
+                  <li>Contact Us</li>
+                  <li>Slack</li>
+                  <li>Jobs</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright p-sm-4 p-3 border-top border-success">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-6">
+              <p>
+                NinjaMail is a sample project for Quest AI. &copy; 2019 Quest
+                AI, All rights reserved.
+              </p>
+            </div>
+            <div class="col-12 col-sm-2">
+              <a class="text-dark" href="">Terms & Conditions</a>
+            </div>
+            <div class="col-12 col-sm-2">
+              <a class="text-dark" href="">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

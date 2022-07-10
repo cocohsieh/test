@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        div {
+            /* border: 1px solid blueviolet; */
+        }
+
+        /* .logo, .nav {
+            border: 1px solid black;
+        } */
+        :root {
+            --main-color: #4BA87D;
+        }
+
+        .container {
+            max-width: 1440px;
+        }
+
+        /* 模組 */
+        .list-unstyled {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* img {
+            max-width: 100%;
+            height: auto;
+        } */
+
+        /* HEADER */
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            height: 102px;
+        }
+
+        /* HEADER內容置中 */
+        .logo a,
+        .nav ul {
+            display: flex;
+            align-items: center;
+        }
+
+        /* 左邊 */
+        .logo {
+            width: 25%;
+            display: flex;
+        }
+
+        .logo .title {
+            font-size: 35px;
+            font-weight: 900;
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            text-decoration: none;
+            /* vertical-align: middle; */
+        }
+
+        .mail-md,
+        .mail-sm {
+            display: none;
+        }
+
+        /* 右邊 */
+        .nav {
+            width: 75%;
+            display: flex;
+            justify-content: flex-end;
+            /* margin-right: 100px; */
+        }
+
+        .navlink {
+            margin-right: 15px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            padding: 10px 10px 5px 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 5px solid var(--main-color);
+        }
+
+        .signup {
+            margin-right: 15px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            padding: 10px 10px 5px 10px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            background: var(--main-color);
+            border-bottom: 5px solid var(--main-color);
+        }
+
+        .nav ul a:hover {
+            background: var(--main-color);
+            color: white;
+        }
+
+        /* MAIN第一區 */
+        /* 文字 */
+        .sec1 {
+            /* margin-top: 100px;  待確認 */
+            position: relative;
+        }
+
+        .sec1 .article {
+            /* /* position: relative; */
+            z-index: 1;
+            margin-top: 125px;
+            margin-left: 110px;
+
+        }
+
+        /* 為什麼跟figma設定一樣的距離會不一樣? 176px*/
+
+        .sec1 .article h1 {
+            font-weight: 900;
+            font-size: 59px;
+            line-height: 71px;
+            margin-bottom: 23px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .h1-sm-use {
+            display: none;
+        }
+
+        .sec1 .article p {
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 26px;
+            margin-bottom: 35px;
+            font-family: 'Raleway';
+        }
+
+        .sec1 .article .btn,
+        .active {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: var(--main-color);
+            color: white;
+            border: 0;
+            border-radius: 0;
+            margin-right: 50px;
+        }
+
+        .sec1 .article .btn:hover {
+            color: var(--main-color);
+            background: white;
+            border: 2px solid #4BA87D;
+        }
+
+        /* 圖片 */
+        .typing-lg {
+            position: absolute;
+            top: 100px;
+            left: 500px;
+        }
+
+        .typing-md,
+        .typing-sm {
+            display: none;
+        }
+
+        /* MAIN第二區 */
+        .sec2 {
+            border: 5px solid #000;
+            position: relative;
+            margin-top: 100px;
+        }
+
+        .sec2 h1 {
+            font-family: 'Playfair Display';
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 80px;
+            color: rgb(255, 255, 255);
+            margin-bottom: 60px;
+        }
+
+        .sec2 .text {
+            margin-top: -360px;
+
+        }
+
+        .video-md,
+        .video-sm {
+            display: none;
+        }
+
+        .sec2 .btn2 {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: white;
+            color: var(--main-color);
+            border-radius: 0;
+            border: 0;
+
+        }
+
+        .sec3 {
+            margin-top: 300px;
+  
+
+        }
+        .sec3-setting>* {
+            width: 30%;
+        }
+        .card1 {
+            margin-top: -50px;
+        }
+
+        /* ---------平板----------------------------------------------- */
+        @media screen and (max-width: 992px) {
+
+            /* HEADER */
+            .logo {
+                width: 15%;
+            }
+
+            .nav {
+                width: 75%;
+            }
+
+            .logo .title {
+                font-size: 22px;
+            }
+
+            .nav ul a {
+                font-size: 11px;
+            }
+
+            /* 圖片 */
+            .mail-lg,
+            .mail-sm {
+                display: none;
+            }
+
+            .mail-md {
+                display: block;
+            }
+
+            /* MAIN第一區 */
+            /* 文字 */
+            .sec1 {
+                /* position: relative; */
+            }
+
+            .sec1 .article {
+                /* position: relative; */
+                /* z-index: 1; */
+                /* margin-top: 125px; */
+                /* margin-left: 110px; */
+            }
+
+            .sec1 .article h1 {
+                font-size: 38px;
+                margin-bottom: 17px;
+            }
+
+            .sec1 .article p {
+                font-size: 12px;
+                margin-bottom: 17px;
+            }
+
+            .sec1 .article .btn,
+            .active {
+                width: 131px;
+                height: 42px;
+                font-size: 13px;
+            }
+
+            /* 圖片 */
+
+            .typing-md {
+                display: block;
+                /* position: absolute;
+                top: 130px;
+                right: 80px; */
+            }
+
+            .typing-lg,
+            .typing-sm {
+                display: none;
+            }
+
+        }
+
+
+        /* --------------------------手機------------------------------ */
+
+        @media screen and (max-width: 768px) {
+
+            /* HEADER */
+            .logo {
+                width: 50%;
+            }
+
+            .nav {
+                width: 50%;
+                /* margin-right: 0px; */
+            }
+
+            .logo .title {
+                font-size: 22px;
+            }
+
+            .nav ul a {
+                font-size: 11px;
+            }
+
+            .navlink {
+                display: none;
+            }
+
+            /* 圖片 */
+            .mail-lg,
+            .mail-md {
+                display: none;
+            }
+
+            .mail-sm {
+                display: block;
+            }
+            .sec3-setting {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+            }
+           
+            }
+            .sec3-setting>* {
+            width: 100%;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col header d-flex align-items-center ">
+
+                <div class="logo">
+                    <a class="title" href="">
+                        <img class="mail-lg" src="images/mail-lg.png" alt="">
+                        <img class="mail-md" src="images/mail-md.png" alt="">
+                        <img class="mail-sm" src="images/mail-sm.png" alt="">
+                        NinjiaMail</a>
+                </div>
+                <div class="nav flex-grow-1 align-center justify-content-end  ">
+                    <ul class="list-unstyled d-flex flex-row ">
+                        <li> <a class="navlink" href="">FEATURES</a> </li>
+                        <li> <a class="navlink" href="">PRICNG</a> </li>
+                        <li> <a class="navlink" href="">SERVICES</a> </li>
+                        <li> <a class="navlink" href="">PARTNERS</a> </li>
+                        <li> <a class="signup active" href="">SIGN UP FREE</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="sec1">
+                    <article class="article border border-dark">
+                        <h1>
+                            Create Stunning<br>
+                            Email Campaigns<br>
+                        </h1>
+                        <p>
+                            Create and launch email campaigns that captivate<br>
+                            your customers in just a few clicks.
+                        </p>
+                        <input class="btn" type="button" value="TRY NOW">
+                        <input class="btn" type="button" value="GET A MEMO">
+
+                    </article>
+                    <img src="images/typing-lg.png" class=" typing-lg" alt="...">
+                    <img src="images/typing-md.png" class=" typing-md" alt="...">
+                    <img src="images/typing-sm.png" class=" typing-sm" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="col d-flex justify-content-center">
+                <div class="sec2 ">
+                    <img src="images/VIDEO-lg.png" class="img-fluid video-lg" alt="...">
+                    <img src="images/VIDEO-md.png" class="img-fluid video-md" alt="...">
+                    <img src="images/VIDEO-sm.png" class="img-fluid video-sm" alt="...">
+                    <div class="text d-flex flex-column align-items-center">
+                        <div>
+                            <h1>Reach More Customers</h1>
+                        </div>
+                        <div>
+                            <input class="btn2" type="button" value="LEARN NOW">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row sec3 ">
+            <div class="colsec3-setting d-flex justify-content-center border border-dark ">
+                <div class="card1 border border-dark" style="width: 18rem;">
+                    <img src="images/person1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Launch campaigns but also find new customers. Our unique platform handles
+                            campaigns from start to
+                            end.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="card2 mx-4" style="width: 18rem;">
+                    <img src="images/people.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Start building and sharing with your team today. NinjaMail is renowned for
+                            its industry leading team collaboration tools.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="sec3-text border border-danger">
+                    <h1>
+                        <br>
+                        The source for<br>
+                        proven, engaging<br>
+                        email campaigns
+                    </h1>
+                    <p>
+                        Whether you’re a startup, small
+                        business, e-commerce store, or
+                        want to promote your app, NinjaMail
+                        has the feature set tailored for
+                        your business.
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-center border border-dark">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <img src="images/person2.png" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <img src="images/person2.png" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <img src="images/person2.png" class="img-fluid" alt="...">
+                    </div>
+                </div>
+            </div>
+            <!-- Bootstrap JavaScript Libraries -->
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+                integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+                crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+                integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>

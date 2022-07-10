@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ninja Mail</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@400;500;700;900&display=swap');
+
+    :root {
+      --main-color: #4BA87D;
+      --main-font: 'Abril Fatface', cursive;
+      --second-font: 'Roboto', sans-serif;
+      --main-font-size: 4rem;
+      --second-font-size: 2.3rem;
+    }
+
+    body p {
+      font-family: var(--second-font);
+    }
+
+    /* -----導覽列----- */
+
+    .main-header {
+      padding: 2% 5%;
+    }
+
+    .nav-item {
+      font-family: var(--second-font);
+      font-weight: 900;
+      padding: 0 10px;
+
+    }
+
+    .nav-item a {
+      text-decoration: none;
+      color: #000;
+      padding: 5px 5px;
+      transition: .3s;
+    }
+
+    .nav-item a:hover {
+      border-bottom: 5px solid #4BA87D;
+    }
+
+    .nav_btn {
+      border: 4px solid #4BA87D;
+      color: #fff;
+      font-family: var(--second-font);
+      font-weight: 900;
+      padding: 2px 10px;
+      background: var(--main-color);
+      letter-spacing: .1rem;
+      transition: .5s;
+    }
+
+    .nav_btn:hover {
+      color: var(--main-color);
+      background: #fff;
+    }
+
+    /* -----形象圖裝飾背景----- */
+
+    .bg-box div {
+      position: absolute;
+    }
+
+    .obox {
+      width: 30px;
+      height: 30px;
+      background: #EFE1BC;
+      left: 15%;
+      top: 7%;
+    }
+
+    .pbox {
+      width: 40px;
+      height: 40px;
+      background: #F4BEBD;
+      transform: rotate(45deg);
+      bottom: 8%;
+    }
+
+    .circle {
+      width: 11px;
+      height: 11px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      left: -3%;
+      bottom: 42%;
+
+    }
+
+    .circle2 {
+      width: 15px;
+      height: 15px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      bottom: 10%;
+      left: 55%
+    }
+
+    .b-circle {
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background: #D9F4F2;
+      top: 15%;
+      right: 45%;
+      z-index: -2;
+    }
+
+    .gbox {
+      width: 30px;
+      height: 30px;
+      background: #F4F4F4;
+      top: 9%;
+      right: 17%;
+      z-index: -2;
+    }
+
+    .bbox {
+      width: 58px;
+      height: 58px;
+      background: #000;
+      transform: rotate(45deg);
+      top: 14%;
+      right: -2%;
+      z-index: -2;
+    }
+
+    /* -----形象區按鈕----- */
+
+    .tittle-btn {
+      width: 100%;
+    }
+
+    .section-btn {
+      border: 4px solid #4BA87D;
+      font-family: var(--second-font);
+      font-weight: 900;
+      width: 20%;
+      padding: 10px 0;
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+
+    .trynow-btn {
+      color: #fff;
+      background: var(--main-color);
+      margin: 10px 10px 0 0;
+      transition: .4s;
+    }
+
+    .trynow-btn:hover {
+      transform: translateY(-10px)
+    }
+
+    .demo-btn {
+      color: var(--main-color);
+      background: #fff;
+      margin: 10px 0 0 10px;
+      transition: .4s;
+    }
+
+    .demo-btn:hover {
+      transform: translateY(-10px)
+    }
+
+    /* -----形象區----- */
+
+    .main-section {
+      position: relative;
+    }
+
+    .main-tittle {
+      padding: 50px 0;
+      position: relative;
+      height: 600px;
+    }
+
+    .box1 img {
+      position: absolute;
+      margin: auto;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .box1-h1 {
+      width: 60%;
+    }
+
+    .box1-h1 h1 {
+      font-size: var(--main-font-size);
+      font-family: var(--main-font);
+    }
+
+    .box1-p {
+      width: 50%;
+    }
+
+    .box1-p p {
+      font-size: 1.2rem;
+    }
+
+    /* -----業務介紹背景----- */
+
+    .second-section {
+      position: relative;
+      background: url(image/slash_black.png) no-repeat 20px 20px, url(image/slash_white.png) no-repeat right 55%, linear-gradient(168deg, #f7f7f7 0%, #f7f7f7 29%, #caeac7 29%, #caeac7 57%, #fff 57%, #fff 100%);
+    }
+
+    .third-bg div {
+      position: absolute;
+    }
+
+    .wbox {
+      background: #f4f4f4a9;
+    }
+
+    .wbox-1 {
+      width: 32px;
+      height: 32px;
+      right: 3%;
+      top: 25%;
+    }
+
+    .wbox-2 {
+      width: 42px;
+      height: 42px;
+      transform: rotate(45deg);
+      bottom: 48%;
+      left: 17%;
+    }
+
+    .wbox-3 {
+      width: 31px;
+      height: 31px;
+      right: 3%;
+      bottom: 50%;
+    }
+
+    .wbox-4 {
+      width: 42px;
+      height: 42px;
+      transform: rotate(45deg);
+      bottom: 67%;
+      right: 8%;
+    }
+
+    .greenbox {
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .1);
+      transform: rotate(45deg);
+      right: 1%;
+      bottom: 56%;
+    }
+
+    .greenbox-0 {
+      width: 27px;
+      height: 27px;
+      background: rgba(0, 0, 0, .1);
+      transform: rotate(45deg);
+      left: 2%;
+      bottom: 56%;
+    }
+
+    .border-c {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #707070;
+      border-radius: 50%;
+      left: 2%;
+      bottom: 45%;
+    }
+
+    .border-c1 {
+      width: 12px;
+      height: 12px;
+      border: 1px solid #707070;
+      border-radius: 50%;
+      right: 10%;
+      bottom: 52%;
+    }
+
+    /* -----StreetArea----- */
+
+    .street-pic img {
+      width: 75%;
+      margin-top: 10%;
+    }
+
+    .street-pic h2 {
+      font-family: var(--main-font);
+      font-size: var(--main-font-size);
+      color: #fff;
+      position: absolute;
+      top: calc(50% - 2rem);
+    }
+
+    .street-pic button {
+      position: absolute;
+      top: 70%;
+      border: 0;
+      padding: 16px 0;
+      font-family: var(--second-font);
+      font-weight: 900;
+      width: 16%;
+      letter-spacing: .1rem;
+      font-size: 1.2rem;
+    }
+
+    .learn-btn {
+      color: var(--main-color);
+      transition: .4s;
+    }
+
+    .learn-btn:hover {
+      color: #fff;
+      background: var(--main-color)
+    }
+
+    /* -----業務content----- */
+
+    .section3-box {
+      margin-top: 10%;
+      height: 600px;
+      /* border: 1px solid red; */
+
+    }
+
+    .third-section {
+      width: 25%;
+      font-size: 1.2rem;
+      padding-bottom: 20px;
+      background: #fff;
+      position: relative;
+      z-index: 2;
+    }
+
+    .third-section-word {
+      background: none
+    }
+
+    .third-section-shadow {
+      box-shadow: 0 0 5px rgba(102, 102, 102, 0.527);
+    }
+
+    .third-section img {
+      width: 100%;
+    }
+
+    .third-word {
+      padding: 20px;
+      margin: 0;
+    }
+
+    .third-section a {
+      padding: 20px;
+      color: var(--main-color);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .third-tittle {
+      font-family: var(--main-font);
+      font-size: var(--second-font-size);
+      margin: 0;
+      padding: 0 15px 0;
+      line-height: 2.5rem;
+    }
+
+    .tittle-word {
+      padding: 15px;
+      margin: 0;
+    }
+
+    /* -----MemberArea----- */
+
+    .member-box {
+      margin: 10% auto;
+    }
+
+    .member {
+      margin: 2%;
+    }
+
+    .member img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .member::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 -30px 100px rgb(0, 0, 0) inset;
+    }
+
+    .member-name {
+      font-size: 2rem;
+      font-weight: 900;
+      position: absolute;
+      bottom: 8%;
+      left: 9%;
+      color: #fff;
+      letter-spacing: .1rem;
+
+    }
+
+    .member-year {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+      position: absolute;
+      bottom: 4%;
+      left: 9%;
+      margin: 0;
+    }
+
+    /* -----emailarea----- */
+
+    .fourth_tittle {
+      width: 50%;
+      font-family: var(--main-font);
+      font-size: var(--second-font-size);
+    }
+
+    .form-control-lg {
+      min-width: 400px;
+      min-height: 56.8px;
+    }
+
+    .form-control {
+      border: 2px solid #ced4da;
+      font-family: var(--second-font);
+    }
+
+    .email_input {
+      height: 100px;
+    }
+
+    .join_btn {
+      min-width: 180px;
+      background: var(--main-color);
+      color: #fff;
+      transition: .4s;
+    }
+
+    .join_btn:hover {
+      background: #fff;
+      color: var(--main-color);
+    }
+
+    .sent_words {
+      color: var(--main-color);
+      font-size: 1.2rem;
+      letter-spacing: .1rem;
+      margin-left: 3%;
+    }
+
+    /* -----brands----- */
+    .brand-logo {
+      margin: 0 auto 10% auto;
+    }
+
+    .brand-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      margin: 20px;
+      object-fit: none;
+
+    }
+
+    .get-start-box {
+      background: var(--main-color);
+      height: 350px;
+    }
+
+    .get-start {
+      text-align: center;
+    }
+
+    .get-start p {
+      color: #fff;
+      font-family: var(--main-font);
+      font-size: var(--main-font-size);
+      letter-spacing: .1rem;
+    }
+
+    .get-start button {
+      color: var(--main-color);
+      background: #fff;
+      border: 0px;
+      padding: 16px 0;
+      font-family: var(--second-font);
+      font-weight: 900;
+      width: 40%;
+      letter-spacing: .1rem;
+      font-size: 1.2rem;
+      transition: .4s;
+    }
+
+    .get-start button:hover {
+      transform: translateY(-10px)
+    }
+
+    /* -----footer----- */
+
+    .footer_nav {
+      margin: 7% 3% 4% 3%;
+    }
+
+    .footer_ul li a {
+      text-decoration: none;
+      color: #000;
+      font-family: var(--second-font);
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .footer_ul li a:hover {
+      color: var(--main-color);
+    }
+
+    .footer_info {
+      width: 90%;
+      margin: 0 auto;
+      border-top: 2px solid #DBDBDB;
+      font-family: var(--second-font);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width:768px) {
+
+
+      .main-header {
+        padding: 0;
+      }
+
+      .main-h1 {}
+
+      .nav-item {
+        display: none;
+      }
+
+      .logo img {
+        width: 85%;
+      }
+
+      .nav_btn {
+        letter-spacing: 0px;
+        margin-right: 5px;
+      }
+
+      /* ---- BG ---- */
+
+      .bg-box {
+        display: none;
+      }
+
+      .second-section {
+        background: url(image/slash_black.png) no-repeat 20px 20px / 80%, url(image/slash_white.png) no-repeat right 55%, linear-gradient(155deg, rgba(247, 247, 247, 1) 0%, rgba(247, 247, 247, 1) 21%, rgba(202, 234, 199, 1) 21%, rgba(202, 234, 199, 1) 51%, rgba(255, 255, 255, 1) 51%, rgba(255, 255, 255, 1) 100%);
+
+      }
+
+      .wbox-1 {
+        width: 10px;
+        height: 10px;
+        left: 13%;
+        top: 33%;
+      }
+
+      .wbox-2 {
+        display: none;
+      }
+
+      .wbox-3 {
+        right: 7%;
+        bottom: 56%;
+      }
+
+      .wbox-4 {
+        transform: rotate(45deg);
+        top: 25%;
+        left: 15%;
+      }
+
+      .greenbox {
+        border-radius: 0%;
+        right: 4%;
+        bottom: 63%;
+      }
+
+      .greenbox-0 {
+        left: 2%;
+        bottom: 70%;
+      }
+
+      .border-c,
+      .border-c1 {
+        display: none;
+      }
+
+      /* -----形象區----- */
+
+      .box1 img {
+        width: 100%;
+        position: relative;
+        margin-top: 30px;
+      }
+
+      .box1-h1 {
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        font-size: 2.8rem;
+      }
+
+      .main-h1 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box1-h1 h1 {
+        font-size: 2.8rem;
+      }
+
+      .box1-p {
+        width: 100%;
+      }
+
+      .box1-p p {
+        font-size: 1rem;
+        margin: 10px 0;
+      }
+
+      .tittle-btn {
+        display: flex;
+        justify-content: center;
+      }
+
+      .section-btn {
+        width: 45%;
+        padding: 5px 0;
+        font-size: 1.1rem;
+      }
+
+
+      .main-tittle {
+        padding: 50px 0;
+        position: relative;
+        height: 100%;
+      }
+
+      /* StreetArea */
+
+      .street-pic img {
+        width: 100%;
+      }
+
+      .street-pic h2 {
+        font-family: var(--main-font);
+        font-size: 1.8rem;
+        top: calc(50% - 1.8rem);
+
+      }
+
+      .street-pic button {
+        position: absolute;
+        top: 65%;
+        border: 0px;
+        padding: 5px 0;
+        width: 25%;
+        letter-spacing: 1px;
+        font-size: .8rem;
+      }
+
+      /* -----業務----- */
+
+      .third-section {
+        width: 80%;
+        font-size: 1.2rem;
+        padding-bottom: 20px;
+
+      }
+
+      .section3-box {
+        margin-top: 10%;
+        height: auto;
+      }
+
+      .email_input {
+        height: 160px;
+      }
+
+      .third-pic2 {
+        margin: 20px 0 20px auto;
+      }
+
+      .third-pic3 {
+        width: 90%;
+        margin: 10px auto;
+      }
+
+      /* -----brands----- */
+
+      .fourth_tittle {
+        width: 90%;
+      }
+
+      .form-control-lg {
+        min-width: 300px;
+      }
+
+      .brand-logo img {
+        margin: 20px auto;
+      }
+
+      .get-start p {
+        font-size: 3rem;
+      }
+
+      /* -----footer----- */
+      .footer_link {
+        margin-right: 20%;
+        padding-top: 5%;
+        align-content: space-between;
+        height: 350px;
+      }
+
+      .footer_nav {
+        margin: 7% auto 4% auto;
+      }
+
+      .footer_ul {
+        margin: 0;
+        padding: 0;
+      }
+
+      .copyR {
+        padding-bottom: 10%;
+      }
+
+      .footer_info {
+        padding-bottom: 10%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="d-flex justify-content-between align-items-center main-header ">
+    <div class="logo">
+      <img src="image/title-logo.png" alt="Ninja Mail">
+    </div>
+    <nav>
+      <ul class="main-nav list-unstyled nav d-flex align-items-center justify-content-end ">
+        <li class="nav-item ">
+          <a href="#">FEATURES</a>
+        </li>
+        <li class="nav-item ">
+          <a href="#">PRICING</a>
+        </li>
+        <li class="nav-item ">
+          <a href="#">SERVICES</a>
+        </li>
+        <li class="nav-item ">
+          <a href="#">PARTNERS</a>
+        </li>
+        <button type="button" class="rounded-0 nav_btn">SIGN UP FREE</button>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="container main-section">
+    <div class="bg-box">
+      <div class="obox"></div>
+      <div class="pbox"></div>
+      <div class="circle"></div>
+      <div class="circle2"></div>
+      <div class="b-circle"></div>
+      <div class="gbox"></div>
+      <div class="bbox"></div>
+    </div>
+
+
+    <div class="row main-tittle">
+      <div class="col box1 d-flex flex-column justify-content-center">
+        <div class="box1-h1">
+          <h1 class="main-h1">Create Stunning <span> Email</span> <span>Campaigns</span> </h1>
+        </div>
+        <img src="image/photo-1544717302-de2939b7ef71 (image).png" alt="">
+        <div class="box1-p">
+          <p>Create and launch email campaigns that captivate
+            your customers in just a few clicks.
+          </p>
+        </div>
+        <div class="tittle-btn ">
+          <button type="button" class="rounded-0 trynow-btn section-btn">TRY NOW</button>
+          <button type="button" class="rounded-0 demo-btn section-btn">GET A DEMO</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid second-section">
+    <div class="row">
+      <div class="col street-pic d-flex flex-column justify-content-center align-items-center position-relative">
+        <img src="image/street.svg" alt="">
+        <h2>Reach More Customers</h2>
+        <button type="button" class="rounded-0 learn-btn">LEARN HOW</button>
+      </div>
+    </div>
+
+    <article
+      class="d-flex flex-column flex-md-row justify-content-around section3-box align-items-start position-relative">
+
+
+      <div class="third-section third-section-shadow align-items-start ">
+        <img src="image/girl.jpg" alt="">
+        <p class="third-word">Launch campaigns but also find new customers. Our unique platform handles campaigns from
+          start to end.</p>
+        <a href="#">Learn More ></a>
+      </div>
+
+      <div class="third-section  align-self-md-end third-section-shadow third-pic2">
+        <img src="image/team.jpg" alt="">
+        <p class="third-word">Start building and sharing with your team today. NinjaMail is renowned for its industry
+          leading team aboration tools.</p>
+        <a href="">Learn More ></a>
+      </div>
+
+      <div class="third-section third-section-word align-self-md-center pb-0 third-pic3">
+        <p class="third-tittle">The source for proven, engaging email campaigns</p>
+        <p class="tittle-word">Whether you’re a startup, small business, e-commerce store, or want to promote your app,
+          NinjaMail
+          has the feature set tailored for your business.
+        </p>
+
+      </div>
+
+    </article>
+
+    <div class="third-bg">
+      <div class="wbox wbox-1"></div>
+      <div class="wbox wbox-2"></div>
+      <div class="wbox wbox-3"></div>
+      <div class="wbox wbox-4"></div>
+      <div class="greenbox"></div>
+      <div class="greenbox-0"></div>
+      <div class="border-c"></div>
+      <div class="border-c1"></div>
+    </div>
+
+    <div class="d-flex flex-column flex-md-row justify-content-around align-items-center member-box">
+      <div class="position-relative member">
+        <img class="member-pic" src="image/Frankie.jpg" alt="Our member Frankie">
+        <p class="member-name">Frankie</p>
+        <p class="member-year">Member since 2016</p>
+      </div>
+      <div class="position-relative member">
+        <img src="image/Camile.jpg" alt="Our member Camile">
+        <p class="member-name">Camile</p>
+        <p class="member-year">Member since 2012</p>
+      </div>
+      <div class="position-relative member">
+        <img src="image/Elayne.jpg" alt="Our member Elayne">
+        <p class="member-name">Elayne</p>
+        <p class="member-year">Member since 2018</p>
+      </div>
+    </div>
+
+    <div class=" d-flex flex-column align-items-center">
+      <h2 class="fourth_tittle text-center">Learn how others are reaching their audience easier than ever before.</h2>
+
+      <form
+        class="d-flex flex-md-row flex-column justify-content-between justify-content-md-center align-items-center align-items-md-start my-5 email_input">
+        <div class="mx-4 text-center text-md-start">
+          <input type="email" class="form-control form-control-lg " id="enterEmail" placeholder="Enter your email">
+          <div class="sent_words mt-3 "></div>
+        </div>
+
+        <button type="button" class="section-btn join_btn">JOIN OUR LIST</button>
+
+      </form>
+
+
+      <p class="fourth_tittle text-center mt-3 mb-5">All the best brands<br> already use us.</p>
+
+
+
+      <div class="brand-logo row align-items-center justify-content-center">
+        <img class="col-6 col-md-auto order-2 order-md-0" src="image/logo-1.png" alt="">
+        <img class="col-6 col-md-auto order-0 order-md-1" src="image/logo-2.png" alt="">
+        <img class="col-6 col-md-auto order-4 order-md-2" src="image/logo-3.png" alt="">
+        <img class="col-6 col-md-auto order-3 order-md-3" src="image/logo-4.png" alt="">
+        <img class="col-6 col-md-auto order-1 order-md-4" src="image/logo-5.png" alt="">
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+  <section class="get-start-box d-flex align-items-center justify-content-center">
+    <div class="get-start ">
+      <p class="my-4">Get started today!</p>
+      <button type="button" class="rounded-0 my-4">PICK A PLAN</button>
+
+    </div>
+  </section>
+
+
+  <footer class="container-fluid">
+    <div class="row footer_nav ">
+      <div class="col-12 col-md-4 text-md-center footer_logo p-0">
+        <img src="image/title-logo.png" alt="Logo">
+      </div>
+      <div class="col col-md-8">
+        <div class="footer_link d-flex flex-md-row flex-column justify-content-md-around flex-md-nowrap flex-wrap">
+          <ul class="list-unstyled footer_ul">
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+
+          <ul class="list-unstyled footer_ul">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Case Studies</a></li>
+          </ul>
+
+          <ul class="list-unstyled footer_ul">
+            <li><a href="#">Medium</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+
+          <ul class="list-unstyled footer_ul">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Slack</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class=" footer_info">
+      <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-around py-4 my-0">
+        <div class="d-flex flex-column flex-md-row copyR">
+          <li>NinjaMail is a sample project for Quest AI.</li>
+          <li>© 2019 Quest AI, All rights reserved.</li>
+        </div>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+
+  <script>
+    let emailBtn = document.querySelector(".join_btn")
+    let receiveWords = document.querySelector(".sent_words")
+    emailBtn.onclick = function () {
+      receiveWords.textContent = "Thanks! Email received."
+    }
+  </script>
+
+</body>
+
+</html>

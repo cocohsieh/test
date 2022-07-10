@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Ninjia Mail</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #4BA87D;
+            --main-font-family: 'Raleway', sans-serif;
+        }
+
+        .list-unstyled {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* -----HEADER----- */
+        .logo a {
+            font-size: 35px;
+            font-weight: 900;
+            font-family: var(--main-font-family);
+            color: black;
+            text-decoration: none;
+        }
+
+        .mail-md,
+        .mail-sm {
+            display: none;
+        }
+
+        .navlink {
+            font-family: var(--main-font-family);
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            padding: 10px 10px 5px 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 5px solid var(--main-color);
+        }
+
+        .signup {
+            margin-right: 15px;
+            font-family: var(--main-font-family);
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            padding: 10px 10px 5px 10px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            background: var(--main-color);
+            border-bottom: 5px solid var(--main-color);
+        }
+
+        .nav ul a:hover {
+            background: var(--main-color);
+            color: white;
+        }
+
+        /* -----SEC1: Email Campaigns----- */
+        .sec1 {
+            margin-top: 100px;
+            position: relative;
+            margin-bottom: 176px;
+        }
+
+        .sec1-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec1 h1 {
+            font-weight: 900;
+            font-size: 59px;
+            line-height: 71px;
+            margin-bottom: 23px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .sec1 p {
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 26px;
+            margin-bottom: 35px;
+            font-family: 'Raleway';
+        }
+
+        .sec1 .btn,
+        .joinbtn,
+        .active {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: var(--main-color);
+            color: white;
+            border: 0;
+            border-radius: 0;
+            margin-right: 50px;
+        }
+
+        .sec1 .btn:hover {
+            color: var(--main-color);
+            background: white;
+            border: 2px solid #4BA87D;
+        }
+
+        .sec1-pic {
+            position: absolute;
+            top: 0;
+            left: 450px;
+        }
+
+        /* 背景裝飾 */
+        .Rec1 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 16%;
+            top: -20%;
+            background: #EFE1BC;
+        }
+
+        .Rec2 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 20%;
+            top: -20%;
+            background: #F4F4F4;
+        }
+
+        .Rec3 {
+            position: absolute;
+            width: 57.89px;
+            height: 57.89px;
+            right: 12%;
+            top: -4%;
+            background: #000000;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+
+        .Rec4 {
+            position: absolute;
+            width: 39.89px;
+            height: 39.89px;
+            left: 2%;
+            top: 120%;
+            background: #F4BEBD;
+            transform: rotate(45deg);
+        }
+
+        .Ellipse1 {
+            position: absolute;
+            width: 37px;
+            height: 37px;
+            border-radius: 30px;
+            left: 57%;
+            top: -8%;
+            background: #D9F4F2;
+            z-index: -1;
+        }
+
+        .Ellipse2 {
+            box-sizing: border-box;
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            right: 5%;
+            top: -20%;
+            background: #FFFFFF;
+            border: 1px solid #707070;
+            border-radius: 50%;
+        }
+
+        /* -----SEC2: Reach More Customers----- */
+        .sec2 {
+            margin-top: 170px;
+            position: relative;
+        }
+
+        .sec2-text {
+            position: absolute;
+            top: 30%;
+        }
+
+        .sec2-text h2 {
+            font-family: 'Playfair Display';
+        }
+
+        .sec2-text .btn-learn-now {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: white;
+            color: var(--main-color);
+            border-radius: 0;
+        }
+
+        /*-----COLUMN 1 兩張小卡+右字-----*/
+        .column1 {
+            /* position: relative; */
+            margin-top: 100px;
+            font-family: 'Raleway';
+        }
+
+        .column1 .card {
+            /* width: 20%; */
+            max-width: 300px;
+            border: 5px solid red;
+            background: #CAEAC7;
+        }
+
+        .card3 h2 {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 48px;
+            color: #000000;
+        }
+
+        .card3 p {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 26px;
+            color: #000000;
+        }
+
+        .green-background {
+            position: absolute;
+            top: 136%;
+            z-index: -1;
+            height: 900px;
+            transform: skewY(-10deg);
+            background: #CAEAC7;
+        }
+
+        /* ---COLUMN 2--- */
+        .member {
+            position: relative;
+            max-width: 400px;
+            max-height: 700px;
+
+        }
+
+        .sec4-intro {
+            position: absolute;
+            bottom: 0%;
+            left: 10%;
+            color: white;
+            font-family: 'Raleway';
+            font-weight: bolder;
+        }
+
+        /*-----SECTION 3 信箱-----*/
+        .learn {
+            font-family: 'Playfair Display';
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 48px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .inputst {
+            /* width: 420px; */
+            /* height: 65px; */
+            background: #FFFFFF;
+            border: 1px solid #9F9F9F;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        ::placeholder {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            color: black;
+            padding: 20px 0 20px 25px;
+
+        }
+
+        .input-text {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            color: #4BA87D;
+        }
+
+        /*-----SECTION 4 品牌-----*/
+        .brand-text {
+            font-family: 'Playfair Display';
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 48px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .brand-img-md {
+            display: none;
+        }
+
+        /* -----SEC5 綠色那塊----- */
+        .sec5 {
+            height: 366px;
+        }
+
+        .sec5 h2 {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 80px;
+            color: white;
+            margin: 50px 0;
+        }
+
+        .sec5 .btn-pick {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: rgb(255, 255, 255);
+            color: #4BA87D;
+            border: 0;
+        }
+
+        .sec5 .btn-pick:hover {
+            background: #4BA87D;
+            color: rgb(255, 255, 255);
+            border: 5px solid rgb(255, 255, 255);
+
+        }
+
+        /* -----SEC6 社群連結----- */
+        .sec6 {
+            margin-top: 80px;
+        }
+
+        .sec6-logo a {
+            color: black;
+            font-weight: bolder;
+            margin-top: 15px;
+            text-decoration: none;
+        }
+
+        .logo-end {
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 31px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .sec6-text li {
+            padding-bottom: 5px;
+        }
+
+        .sec6-text a {
+            text-decoration: none;
+            color: #000000;
+            font-family: 'Raleway';
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 22px;
+        }
+
+        /* -----FOOTER1----- */
+        .footer {
+            margin: 30px 0;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            color: #000000;
+            border-top: 2px solid #DBDBDB;
+            padding-top: 50px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            /* HEADER部分 */
+            .logo a {
+                font-size: 22px;
+            }
+
+            .navlink {
+                font-size: 11px;
+            }
+
+            .signup {
+                font-size: 11px;
+            }
+
+            .mail-lg,
+            .mail-sm {
+                display: none;
+            }
+
+            .mail-md {
+                display: block;
+            }
+
+            /* -----Email Campaigns----- */
+            .sec1 h1 {
+                font-size: 38px;
+                line-height: 45px;
+            }
+
+            .sec1 p {
+                font-size: 12px;
+            }
+
+            .sec1 .btn,
+            .active {
+                width: 131px;
+                height: 42px;
+                font-size: 13px;
+            }
+
+            .sec1 .btn:hover {
+                color: var(--main-color);
+                background: white;
+                border: 2px solid #4BA87D;
+            }
+
+            .typing-md {
+                display: block;
+            }
+
+            .sec1-pic {
+                position: absolute;
+                top: 0;
+                left: 300px;
+            }
+
+            /* -----SEC2: Reach More Customers----- */
+            .sec2-text h2 {
+                font-size: 38px;
+                margin-bottom: 40px;
+            }
+
+            .sec2-text .btn-learn-now {
+                width: 132px;
+                height: 42px;
+                font-size: 13px;
+            }
+
+            .column1 .card {
+                width: 40%;
+            }
+
+            /*-----SECTION 4 品牌-----*/
+            .brand-text {
+                font-size: 28px;
+                line-height: 36px;
+            }
+
+            .brand-img-md {
+                display: block;
+            }
+
+            /* 綠色那塊 */
+            .sec5 {
+                height: 240px;
+            }
+
+            .sec5 h2 {
+                font-size: 42px;
+                line-height: 56px;
+            }
+
+            .sec5 .btn-pick {
+                width: 131px;
+                height: 42px;
+                font-size: 13px;
+                line-height: 15px;
+            }
+
+            /* -----SEC6----- */
+            .sec6-logo a {
+                color: black;
+                font-weight: bolder;
+                text-decoration: none;
+                border: 1px solid black;
+                margin: auto 0;
+            }
+
+            .sec6-text a {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            .footer {
+                font-weight: 700;
+                font-size: 9px;
+                line-height: 11px;
+            }
+
+            .logo-end {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            /* HEADER部分 */
+            .logo a {
+                font-size: 22px;
+            }
+
+            .navlink {
+                font-size: 11px;
+                display: none;
+            }
+
+            .signup {
+                font-size: 11px;
+            }
+
+            .mail-lg,
+            .mail-md {
+                display: none;
+            }
+
+            .mail-sm {
+                display: block;
+            }
+
+            /* -----Email Campaigns----- */
+            .sec1-all {
+                display: flex;
+                justify-content: center;
+            }
+
+            .sec1-pic {
+                position: absolute;
+                display: flex;
+                top: 10%;
+                left: 0%;
+            }
+
+            .sec1 h1 {
+                max-width: 50%;
+                margin-bottom: 40%;
+            }
+
+            .Rec1,
+            .Rec2,
+            .Rec3,
+            .Rec4,
+            .Ellipse1,
+            .Ellipse2 {
+                display: none;
+            }
+
+            /* -----SEC2: Reach More Customers----- */
+
+            .sec2-text h2 {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+
+            .sec2-text .btn-learn-now {
+                width: 65px;
+                height: 21px;
+                font-size: 6px;
+            }
+
+            /*-----COLUMN 1 兩張小卡+右字-----*/
+            .column1-sm {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .column1 .card {}
+
+            .column1 .card2 {
+                align-items: flex-end;
+            }
+
+            .column1 .card3 {
+                align-items: center;
+            }
+
+            .green-background {
+                position: absolute;
+                top: 150%;
+                z-index: -1;
+                height: 1060px;
+                transform: skewY(-10deg);
+                background: #CAEAC7;
+            }
+
+            .member-main {
+                margin-top: 500px;
+            }
+
+            .joinbtn {
+                margin-right: 0px;
+            }
+
+            /*-----SECTION 4 品牌-----*/
+            .brand-text {
+                font-size: 26px;
+                line-height: 36px;
+            }
+
+            .brand-img {
+                display: flex;
+                justify-content: center;
+            }
+
+            /* 綠色那塊 */
+            .sec5 {
+                height: 290px;
+            }
+
+            .sec5 h2 {
+                font-size: 42px;
+                line-height: 48px;
+                margin: 50px 0;
+            }
+
+            .sec5 .btn-pick {
+                width: 131px;
+                height: 42px;
+                font-size: 13px;
+                line-height: 15px;
+            }
+
+            /* -----FOOTER1----- */
+            .footer1-logo a {
+                color: black;
+                font-weight: bolder;
+                margin: auto 0;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- -----HEADER----- -->
+    <div class="container">
+        <header class="header d-flex justify-content-between align-items-center">
+
+            <div class="logo d-flex align-items-center">
+                <img class="mail-lg" src="images/mail-lg.png" alt="">
+                <a class="title" href="">NinjiaMail</a>
+            </div>
+            <div class="">
+                <ul class="list-unstyled d-flex">
+                    <li> <a class="navlink me-3" href="">FEATURES</a> </li>
+                    <li> <a class="navlink me-3" href="">PRICNG</a> </li>
+                    <li> <a class="navlink me-3" href="">SERVICES</a> </li>
+                    <li> <a class="navlink me-3" href="">PARTNERS</a> </li>
+                    <li> <a class="signup active" href="">SIGN UP FREE</a> </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <!-- -----SECTION 1 左字右圖----- -->
+    <div class="container">
+        <div class="row sec1 ">
+            <div class="col sec1-all">
+                <div class="sec1-text">
+                    <div>
+                        <h1>
+                            Create stunning<br>
+                            Email Campaigns<br>
+                        </h1>
+                    </div>
+                    <div>
+                        <p>
+                            Create and launch email campaigns that captivate<br>
+                            your customers in just a few clicks.
+                        </p>
+                        <div class="btn-group">
+                            <input class="btn" type="button" value="TRY NOW">
+                            <input class="btn" type="button" value="GET A MEMO">
+                        </div>
+                    </div>
+                </div>
+                <div class="sec1-pic  ">
+                    <img class="typing-lg shadow img-fluid" src="images/typing-lg.png" alt="">
+                </div>
+                <div class="Rec1"></div>
+                <div class="Rec2"></div>
+                <div class="Rec3"></div>
+                <div class="Rec4"></div>
+                <div class="Ellipse1"></div>
+                <div class="Ellipse2"></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- -----SECTION 2 照片----- -->
+    <div class="container">
+        <div class="row sec2">
+            <div class="col d-flex justify-content-center">
+                <img class="img-fluid w-100 h-100" src="images/VIDEO-lg.png" alt="">
+            </div>
+            <div class="sec2-text text-center">
+                <h2 class="text-light display-3 fw-bold mb-5">Reach More Customers</h2>
+                <input class="btn-learn-now border-0 " type="button" value="LEARN NOW">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid green-background"></div>
+    <!-- -----COLUMN 1 兩張小卡+右字----- -->
+    <div class="container ">
+        <div class="row column1" style="height: 700px;">
+            <div class="col ">
+                <div class="row  d-flex flex-column  mb-4 ">
+                    <div class="col align-self-sm-start" style="width:300px ;">
+                        <img src="images/person1.png" class="card-img-top " alt="...">
+                    </div>
+                    <div class="col align-self-sm-start" style="width:300px ;">
+                        <p class="card-text bg-light p-3">Launch campaigns but also find new customers. Our unique
+                            platform handles
+                            campaigns from start to end.<br>
+                            <br>
+                            <a href="#" class="text-success text-decoration-none bg-light fw-bold">Learn More></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-md-center">
+                <div class="row d-flex flex-column  mb-4 card2">
+                    <div class="col " style="width:300px ;">
+                        <img src="images/people.png" class="card-img-top" alt="...">
+                    </div>
+                    <div class="col " style="width:300px ;">
+                        <p class="card-text bg-light p-3">Start building and sharing with your team today. NinjaMail is
+                            renowned for
+                            its industry leading team collaboration tools.<br>
+                            <br>
+                            <a href="#" class="text-success text-decoration-none bg-light fw-bold">Learn More></a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col align-self-md-center ">
+                <div class="row  d-flex flex-column mb-4 card3">
+                    <div class="col" style="width:360px ;">
+                        <h2 class="fs-1 fw-bold">
+                            The source for
+                            proven, engaging
+                            email campaigns
+                        </h2>
+                    </div>
+                    <div class="col" style="width:360px ;">
+                        <p>
+                            Whether you’re a startup, small
+                            business, e-commerce store, or
+                            want to promote your app, NinjaMail
+                            has the feature set tailored for
+                            your business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----COLUMN 2 學員----- -->
+    <div class="container">
+        <div class="row column2 justify-content-center member-main">
+            <div class=" col-md-4 d-flex member my-3">
+                <div class="justify-content-center">
+                    <img src="images/frankie-lg.png" class="img-fluid" alt="...">
+                    <div class="sec4-intro text-light">
+                        <h3>Frankie</h3>
+                        <p>Member since 2016</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex member my-3">
+                <img src="images/camile-lg.png" class="img-fluid" alt="...">
+                <div class="sec4-intro">
+                    <h3>Camile</h3>
+                    <p>Member since 2012</p>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex member my-3">
+                <img src="images/elayne-lg.png" class="img-fluid" alt="...">
+                <div class="sec4-intro">
+                    <h3>Elayne</h3>
+                    <p>Member since 2018</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----SECTION 3 信箱----- -->
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 mb-3">
+                <p class="learn">Learn how others are reaching their<br>
+                    audience easier than ever before.</p>
+            </div>
+            <div class="row email d-flex justify-content-center text-center">
+                <div class="col-12 col-md-5 ">
+                    <div class="">
+                        <input type="text" class="form-control w-100 mb-3" placeholder="Enter your email ">
+                        <p class="input-text text-md-start ">Thanks! Email received.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-2">
+                    <input class="btn joinbtn " type="button" value="JOIN OUR LIST">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----SECTION 4 品牌----- -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col brand-text my-5">
+                <p>All the best brands<br>
+                    already use us.</p>
+            </div>
+        </div>
+        <div class="row d-flex brand-img text-center justify-content-center align-items-center mb-5"
+            style="height: 80px;">
+            <div class="col-6 col-md-2 ">
+                <a class=brand-img-lg img-fluid href=""> <img src="images/brand1-lg.png" alt=""></a>
+            </div>
+            <div class="col-6 col-md-2 text-center ">
+                <a class=brand-img-lg href=""> <img src="images/brand2-lg.png" alt=""></a>
+            </div>
+            <div class="col-6 col-md-2">
+                <a class=brand-img-lg href=""> <img src="images/brand3-lg.png" alt=""></a>
+            </div>
+            <div class="col-6 col-md-2">
+                <a class=brand-img-lg href=""> <img src="images/brand4-lg.png" alt=""></a>
+            </div>
+            <div class="col-6 col-md-2">
+                <a class=brand-img-lg href=""> <img src="images/brand5-lg.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <img src="/images/" alt="">
+    <!-- -----SECTION 5 綠色那塊----- -->
+    <div class="container-fluid" style="background:#4BA87D ;">
+        <div class="row sec5">
+            <div class="col">
+                <div class="text-center">
+                    <h2 class="">Get started today!</h2>
+                    <input class="btn-pick" type="button" value="PICK A PLAN">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----SECTION 6 社群連結----- -->
+    <div class="container">
+        <div class="row sec6">
+            <div class="col-12 col-md-4">
+                <div><img class="mail-lg-footer" src="images/mail-lg.png" alt="">
+                    <a class="logo-end" href="">NinjiaMail</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 ">
+                <div class="row d-flex justify-content-end sec6-text">
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Pricing</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Partners</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Tutorials</a></li>
+                            <li><a href="">Resources</a></li>
+                            <li><a href="">Help Center</a></li>
+                            <li><a href="">Templates</a></li>
+                            <li><a href="">Case Studies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 sec6-text">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled ">
+                            <li><a href="">Medium</a></li>
+                            <li><a href="">Twitter</a></li>
+                            <li><a href="">Facebook</a></li>
+                            <li><a href="">Instagram</a></li>
+                            <li><a href="">Linkedln</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="list-unstyled">
+                            <li><a href="">Contact Us</a></li>
+                            <li><a href="">Slack</a></li>
+                            <li><a href="">Jobs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----FOOTER----- -->
+    <div class="container">
+        <div class="row footer">
+            <div class="col-12 col-md-8">
+                <p>NinjaMail is a sample project for Quest AI. © 2019 Quest AI, All rights reserved.</p>
+            </div>
+            <div class="col-12 col-md-4 d-flex footer2-1">
+                <div class="me-3">
+                    <a href="">Terms & Conditions</a>
+                </div>
+                <div>
+                    <a href="">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

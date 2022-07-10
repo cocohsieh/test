@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #4BA87D;
+        }
+
+        .container {
+            max-width: 1000px;
+            /* font-family: 'Raleway', sans-serif; */
+        }
+
+        .header {
+            /* max-width: 100%; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header ul {
+            display: flex;
+            margin: auto 20px;
+        }
+
+        .header ul a {
+            margin-right: 15px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 20px;
+            letter-spacing: 1.275px;
+            padding: 10px 10px 5px 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 5px solid var(--main-color);
+        }
+
+        .header ul a:hover {
+            background: var(--main-color);
+            color: white;
+
+        }
+
+        .header .title {
+            font-size: 35px;
+            font-weight: 900;
+            font-family: 'Raleway', sans-serif;
+            color: black;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+
+        .mail-md,
+        .mail-sm {
+            display: none;
+        }
+
+        /* SECTION 1 */
+        .sec1 {
+            position: relative;
+            /* display: flex; */
+            margin: 125px 0px;
+        }
+
+        .sec1 .sec1-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sec1 h1 {
+            font-weight: 900;
+            font-size: 59px;
+            line-height: 71px;
+            margin-bottom: 23px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .sec1 p {
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 26px;
+            margin-bottom: 35px;
+            font-family: 'Raleway';
+        }
+
+        .sec1-text .btn,
+        .active {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: var(--main-color);
+            color: white;
+            border: 0;
+            border-radius: 0;
+            margin-right: 50px;
+        }
+
+        .sec1-text .btn:hover {
+            color: var(--main-color);
+            background: white;
+            border: 2px solid #4BA87D;
+        }
+
+        .typing-lg {
+            position: absolute;
+            top: -20px;
+            left: 450px;
+        }
+
+        .typing-md,
+        .typing-sm {
+            display: none;
+        }
+
+        /* SECTION 2 */
+        .sec2 {
+            margin-top: 100px;
+            text-align: center;
+            position: relative;
+        }
+
+        .sec2 h1 {
+            font-family: 'Playfair Display';
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 80px;
+            color: white;
+            /* text-align: center; */
+            margin-bottom: 70px;
+        }
+
+        .sec2 .text {
+            position: absolute;
+            top: 160px;
+            left: 250px;
+        }
+
+        .sec .video {
+            width: 100%;
+        }
+
+        .video-md,
+        .video-sm {
+            display: none;
+        }
+
+        .sec2 .btn2 {
+            width: 200px;
+            height: 65px;
+            font-family: 'Raleway';
+            font-weight: 900;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.05px;
+            background: white;
+            color: var(--main-color);
+            border-radius: 0;
+            border: 0;
+        }
+
+        /* SECTION 3 */
+        .sec3 {
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid black;
+            margin-top: 100px;
+        }
+
+        .sec3 .text {
+            width: 350px;
+            height: 300px;
+        }
+
+        div {
+            /* border: 1px solid black; */
+        }
+
+        /* 平板 */
+        @media screen and (max-width:768px) {
+            .header .title {
+                font-size: 22px;
+            }
+
+            .header ul a {
+                font-size: 11px;
+            }
+
+            .mail-md {
+                display: inline;
+            }
+
+            .mail-lg,
+            .mail-sm,
+            .typing-lg,
+            .typing-sm,
+            .video-lg,
+            .video-sm {
+                display: none;
+            }
+
+            .sec1 {
+                position: relative;
+                /* display: flex; */
+                margin: 125px 0px;
+                padding-left: 50px;
+            }
+
+            .sec1-text .btn {
+                width: 131px;
+                height: 42px;
+                font-weight: 900;
+                font-size: 13px;
+            }
+
+            .sec1 .sec1-text {
+                position: relative;
+                z-index: 1;
+
+            }
+
+            .sec1 h1 {
+                font-size: 38px;
+                margin-bottom: 17px;
+            }
+
+            .sec1 p {
+                font-size: 12px;
+                margin-bottom: 25px;
+            }
+
+            .typing-md {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 350px;
+            }
+
+            .video-md {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .sec2 h1 {
+                font-size: 38px;
+                margin-bottom: 25px;
+            }
+
+            .sec2 .text {
+                position: absolute;
+                top: 100px;
+                left: 200px;
+            }
+
+            .sec2 .btn2 {
+                width: 132px;
+                height: 42px;
+                font-size: 13px;
+
+            }
+        }
+
+        /* 手機 */
+        @media screen and (max-width:576px) {
+
+            /* HEADER */
+            .header {
+                margin-top: 20px;
+            }
+
+            .header .title {
+                font-size: 22px;
+            }
+
+            .mail-lg,
+            .mail-md,
+            .typing-lg,
+            .typing-md,
+            .video-lg,
+            .video-md {
+                display: none;
+            }
+
+            .mail-sm {
+                display: inline;
+            }
+
+            .navlink {
+                display: none;
+            }
+
+            .signup {
+                font-size: 11px;
+            }
+
+            .typing-sm {
+                display: block;
+            }
+
+            /* SECTION 1 */
+            .sec1-text h1 {
+                font-size: 36px;
+                font-weight: 900;
+            }
+
+            .sec1-text p {
+                font-size: 14px;
+            }
+
+            .sec1 .btn {
+                width: 143px;
+                height: 40px;
+                font-size: 13px;
+            }
+
+            /* SECTION 2 */
+            .video-lg,
+            .video-md {
+                display: none;
+            }
+
+            .video-sm {
+                display: block;
+            }
+
+            .sec2 .text h1 {
+                font-weight: 900;
+                font-size: 22px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col header">
+                <div>
+                    <img class="mail-lg" src="images/mail-lg.png" alt="">
+                    <img class="mail-md" src="images/mail-md.png" alt="">
+                    <img class="mail-sm" src="images/mail-sm.png" alt="">
+                    <a class="title" href="">NinjiaMail</a>
+                </div>
+                <div>
+                    <ul class=" list-unstyled">
+                        <li> <a class="navlink" href="">FEATURES</a> </li>
+                        <li> <a class="navlink" href="">PRICNG</a> </li>
+                        <li> <a class="navlink" href="">SERVICES</a> </li>
+                        <li> <a class="navlink" href="">PARTNERS</a> </li>
+                        <li> <a class="signup active" href="">SIGN UP FREE</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col sec1">
+                <img class="typing-lg" src="images/typing-lg.png" alt="">
+                <img class="typing-md" src="images/typing-md.png" alt="">
+                <img class="typing-sm" src="images/typing-sm.png" alt="">
+                <div class="sec1-text">
+                    <h1>
+                        Creating stunning<br>
+                        Email Campaigns<br>
+                    </h1>
+                    <p>
+                        Create and launch email campaigns that captivate<br>
+                        your customers in just a few clicks.
+                    </p>
+                    <input class="btn" type="button" value="TRY NOW">
+                    <input class="btn" type="button" value="GET A MEMO">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="sec2">
+                    <img class="video-lg" src="images/VIDEO-lg.png" alt="">
+                    <img class="video-md" src="images/VIDEO-md.png" alt="">
+                    <img class="video-sm" src="images/VIDEO-sm.png" alt="">
+                    <div class="text">
+                        <h1>Reach More Customers</h1>
+                        <input class="btn2" type="button" value="LEARN NOW">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col sec3">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/person1.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Launch campaigns but also find new customers. Our unique platform handles
+                            campaigns from start to
+                            end.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/people.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Start building and sharing with your team today. NinjaMail is renowned for
+                            its industry leading
+                            team collaboration tools.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="text">
+                    <h1>
+                        The source for<br>
+                        proven, engaging<br>
+                        email campaigns
+                    </h1>
+                    <p>
+                        Whether you’re a startup, small
+                        business, e-commerce store, or
+                        want to promote your app, NinjaMail
+                        has the feature set tailored for
+                        your business.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row sec1">
+            <div class="col-md-6 sec1-left">
+                <div>
+                    <div class="h1">
+                        <h1>
+                            Creating stunning<br>
+                            Email Campaigns<br>
+                        </h1>
+                    </div>
+                    <p>
+                        Create and launch email campaigns that captivate<br>
+                        your customers in just a few clicks.
+                    </p>
+                    <input type="button" value="button">
+                    <input type="button" value="button">
+                </div>
+            </div>
+            <div class="col-md-6 sec1-right">
+                <div class="pic">
+                    <img src="images/typing.png" alt="">
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
